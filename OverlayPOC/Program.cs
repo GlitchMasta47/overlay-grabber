@@ -20,10 +20,11 @@ namespace OverlayPOC
              * assume you don't care about user security unless they
              * have a Nitro subscription or they're partnered.
              * 
-             * You can only go so long before your platform goes down.
-             * Please just care about user security for once.
+             * You can only go so long before people stop using your
+             * platform. Please just care about user security for once.
              * 
-             * Send inquiries to @glitchmasta47 on Twitter.
+             * Send inquiries to @glitchmasta47 on Twitter, Telegram,
+             * or Keybase.
              */
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
