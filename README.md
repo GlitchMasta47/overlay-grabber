@@ -5,7 +5,7 @@ Simple Windows proof of concept for the Discord Overlay exploit. Named after Ana
 Open this repository in Microsoft Visual Studio (this project was made in 2017 but newer versions should work fine) with C# tools installed and build from there.
 
 ## Pre-built Executables
-Don't have Visual Studio? Go to the [releases](https://github.com/GLitchMasta47/overlay-grabber/releases) page and download the exe file.
+Don't have Visual Studio? Go to the [releases](https://github.com/GlitchMasta47/overlay-grabber/releases) page and download the exe file.
 
 ## License
 This project is licensed with The Unlicense, meaning you're free to do anything with this project and the source code as you wish. This project could easily be made better by anybody else with more C# experience than I have, so I invite everyone who matches that description to fork this repository and make it more efficient.
