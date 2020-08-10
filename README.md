@@ -11,7 +11,7 @@ Don't have Visual Studio? Go to the [releases](https://github.com/GlitchMasta47/
 This project is licensed with The Unlicense, meaning you're free to do anything with this project and the source code as you wish. This project could easily be made better by anybody else with more C# experience than I have, so I invite everyone who matches that description to fork this repository and make it more efficient.
 
 ## Note to Discord
-How did you actually make a mistake this terrible. I recommend the implementing the below list of basic fixes that would make this attack incredibly difficult if not impossible.
+How did you actually make a mistake this terrible? I recommend implementing or considering implementing the below list of basic fixes that would make this attack incredibly difficult if not impossible.
 
 - [ ] When the user turns off "Enable in-game overlay" in their user settings, the client should block any attempted overlay connections
 - [ ] When the overlay request comes in, verify that the process id sent is not only valid but is a game that Discord knows and (even better) a game that Discord has actually launched the overlay for
