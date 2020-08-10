@@ -7,6 +7,19 @@ Open this repository in Microsoft Visual Studio (this project was made in 2017 b
 ## Pre-built Executables
 Don't have Visual Studio? Go to the [releases](https://github.com/GlitchMasta47/overlay-grabber/releases) page and download the exe file.
 
+## Potentially Dangerous Uses
+Here's a very brief list of possible malicious uses for this exploit:
+
+- Hidden in a game and sent to content creators
+- "Free Nitro hack"
+- Implemented in RAT toolkits and sold
+- And many more
+
+This exploit could easily be hidden in any application and while "never open apps you don't know about" is always something people know, a lot of people don't treat apps as dangerously as they could be.
+
+## Why is this important?
+Unlike many other similar exploits, this one doesn't read or write to the disk or inject code into Discord. As far as any antivirus scan would show, it only has local network activity and that's it. The ZIP file is only detected by [1/63 antiviruses](https://www.virustotal.com/gui/file/4ed01cb3d9fdc64e233e019fecaa38282aba5828eaca699c7576888b5c9e2429/detection) and the executable is only detected by [1/70 antiviruses](https://www.virustotal.com/gui/file/36868eddbf3c06c851421395c1735a380af7aea1dc51cedf5e9003d2d9f75a94/detection). These are insanely low numbers, and anybody running this with antiviruses installed are extremely unlikely to have it automatically deleted.
+
 ## License
 This project is licensed with The Unlicense, meaning you're free to do anything with this project and the source code as you wish. This project could easily be made better by anybody else with more C# experience than I have, so I invite everyone who matches that description to fork this repository and make it more efficient.
 
