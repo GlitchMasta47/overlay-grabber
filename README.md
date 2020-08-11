@@ -1,8 +1,39 @@
 # Overlay Grabber
 Simple Windows proof of concept for the Discord Overlay exploit. Named after Anarchy Grabber, a similar Discord exploit that can also be used to get user information.
 
+## How does it work?
+The Discord Game Overlay connects to the user's Discord client over a WebSocket server it creates for RPC. After investigating the data being sent between the client and the overlay on June 24, 2020, I found that one of the payloads being sent (`OVERLAY_INITIALIZE`) contained an almost complete dump of user information including:
+
+- Username and discriminator (4 digits after the #)
+- User ID
+- User's email and phone number if they were linked
+- **User's auth token (allows anybody to perform actions as that user)**
+- User's analytics token (used by Discord for tracking analytics data)
+- A list of all servers the user is in and:
+  - The server's name, image, and ID
+  - All channels in the server (including ones that the user doesn't have permission to see)
+  - All members of the server and all roles they have, the color of their username, and server nickname if one is set
+  - All emojis from the server
+  - The server's explicit content filter setting and verification setting
+  - The server's feature flags (whether or not it has access to announcement channels, server insights, welcome screens, etc.)
+  - When the server was made and when the user joined the server
+  - All server roles including color, permissions, and if it's pingable
+  - How many server boosts the server has and what boost level the server is at
+- The user's friends list, blocked list, and pending friend requests
+- A list of every user that the client has ever interacted with
+  - That user's name, discriminator, id, and profile picture
+  - The user's online status and playing status (including rich presence info)
+  - The custom note linked to that user
+  - When their account was created
+  - User flags (mostly badges on their profile, e.g. Nitro or HypeSquad Houses)
+  - Mutual servers and friends (may require auth token usage)
+- **Cached payment information if available including full name and billing address**
+  - If not cached, can also be retrieved using the user's auth token
+  
+If this proof of concept didn't disconnect after receiving this data, it would also be forwarded all gateway events including **incoming messages in all channels and DMs**, status changes, etc. Unlike Anarchy Grabber, this exploit can't retrieve the user's password but it can still get a lot of information about the user without restarting Discord or leaving files behind.
+
 ## Building
-Open this repository in Microsoft Visual Studio (this project was made in 2017 but newer versions should work fine) with C# tools installed and build from there.
+Open this repository in Microsoft Visual Studio (this project was made in Visual Studio 2017 but newer versions should work fine) with C# tools installed and build from there.
 
 ## Pre-built Executables
 Don't have Visual Studio? Go to the [releases](https://github.com/GlitchMasta47/overlay-grabber/releases) page and download the exe file.
